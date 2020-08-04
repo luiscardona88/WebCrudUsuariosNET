@@ -1,0 +1,5 @@
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\bin\Debug\Base_Datos.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\bin\Debug\Base_Datos.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\obj\Debug\Base_Datos.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\obj\Debug\Base_Datos.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\obj\Debug\Base_Datos.csprojResolveAssemblyReference.cache

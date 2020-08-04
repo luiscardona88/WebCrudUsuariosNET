@@ -1,0 +1,7 @@
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\bin\Debug\Modelo.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\bin\Debug\Modelo.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\bin\Debug\Base_Datos.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\bin\Debug\Base_Datos.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelo.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelo.pdb

@@ -1,0 +1,11 @@
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\obj\Debug\Facade.csprojResolveAssemblyReference.cache
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Facade.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Facade.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Modelo.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Newtonsoft.Json.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Base_Datos.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Modelo.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Newtonsoft.Json.xml
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Base_Datos.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\obj\Debug\Facade.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\obj\Debug\Facade.pdb

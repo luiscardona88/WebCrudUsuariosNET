@@ -1,0 +1,14 @@
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\WebApplication11.dll.config
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\WebApplication11.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\WebApplication11.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\obj\Debug\WebApplication11.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\obj\Debug\WebApplication11.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\obj\Debug\WebApplication11.csprojResolveAssemblyReference.cache
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Facade.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Modelo.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Newtonsoft.Json.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Base_Datos.dll
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Facade.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Modelo.pdb
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Newtonsoft.Json.xml
+c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Base_Datos.pdb
