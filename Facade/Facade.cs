@@ -31,16 +31,14 @@ namespace Facade
         return response;
     }
 
-        public string actualizarUsuario(String nombre, String apellido, String edad, String estados_civil, String telefono, String ciudad)
+        public string actualizarUsuario(String nombre, String apellido, String edad, String estados_civil, String telefono, String ciudad,int id_usuario)
         {
 
-            Object []response= usuario_model.actualizar(nombre,apellido, edad,estados_civil, telefono,ciudad);
+            Object[] response = usuario_model.actualizar(nombre, apellido, edad, estados_civil, telefono, ciudad, id_usuario);
 
           int respuesta=int.Parse(response[1] as String);
-
-        return Newtonsoft.Json.JsonConvert.SerializeObject(response);
-
-        
+          return respuesta.ToString();
+       // ****TOMAR EN CUENTA  ESTO DEBE DE ESTUDIARSE BIEN  23/08/2020 ****return Newtonsoft.Json.JsonConvert.SerializeObject(response);
 
         }
 
@@ -54,7 +52,14 @@ namespace Facade
 
             return Newtonsoft.Json.JsonConvert.SerializeObject(response);
 
+        }
 
+        public Object[] borrarUsuario(int estatus,int usuario)
+        {
+
+            Object[] response = usuario_model.deleteUsuario(estatus,usuario);
+
+            return response;
 
         }
 
