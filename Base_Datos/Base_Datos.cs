@@ -33,7 +33,14 @@ namespace Base_Datos
                 this.resultados = new Object[2];
                 string cadena_conex = ConfigurationManager.AppSettings["Conex"];
                 this.conexion = new SqlConnection(cadena_conex);
+
+                if (this.conexion.State == System.Data.ConnectionState.Open) this.conexion.Close();
                 this.conexion.Open();
+                
+                   
+
+                
+              
 
             }
 

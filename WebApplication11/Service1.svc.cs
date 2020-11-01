@@ -58,19 +58,27 @@ namespace WebApplication11
 
         [OperationContract]
         [WebGet]
-        public String actualizarUsuario(String nombre, String apellido, String edad, String estados_civil, String telefono, String ciudad)
+        public String actualizarUsuario(String nombre, String apellido, String edad, String estados_civil, String telefono, String ciudad,int id_usuario)
         {
-            return this.f.actualizarUsuario(nombre, apellido, edad, estados_civil, telefono, ciudad);
+            return this.f.actualizarUsuario(nombre, apellido, edad, estados_civil, telefono, ciudad, id_usuario);
         }
 
 
         [OperationContract]
-        [WebGet]
+        [WebInvoke]
         public string nuevoUsuario(String nombre, String apellido, int edad, int estados_civil, String telefono, String ciudad)
         {
           return f.nuevoUsuario(nombre,apellido, edad, estados_civil, telefono, ciudad);
 
+        }
 
+
+        [OperationContract]
+        [WebInvoke]
+        public string borrarUsuario(int estatus, int id_usuario)
+        {
+
+            return f.borrarUsuario(estatus, id_usuario)[1].ToString();
 
         }
 
