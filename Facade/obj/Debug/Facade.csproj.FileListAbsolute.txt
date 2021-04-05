@@ -9,3 +9,13 @@ c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\bin\Debug\Base_Datos.pdb
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\obj\Debug\Facade.dll
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Facade\obj\Debug\Facade.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Facade.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Facade.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Modelo.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Base_Datos.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Modelo.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\bin\Debug\Base_Datos.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\obj\Debug\Facade.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\obj\Debug\Facade.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Facade\obj\Debug\Facade.pdb

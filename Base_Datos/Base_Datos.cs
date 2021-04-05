@@ -36,12 +36,7 @@ namespace Base_Datos
 
                 if (this.conexion.State == System.Data.ConnectionState.Open) this.conexion.Close();
                 this.conexion.Open();
-                
-                   
-
-                
-              
-
+ 
             }
 
 

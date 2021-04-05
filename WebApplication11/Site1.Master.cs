@@ -11,7 +11,11 @@ namespace WebApplication11
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["sesion"]==null)
+            {
+                Response.Redirect("Login.aspx");
 
+            }
         }
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)

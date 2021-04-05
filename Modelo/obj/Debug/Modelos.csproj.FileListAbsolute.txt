@@ -5,3 +5,10 @@ c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\bin\
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelo.dll
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\bin\Debug\Modelo.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\bin\Debug\Base_Datos.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\bin\Debug\Base_Datos.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\obj\Debug\Modelo.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Modelo\obj\Debug\Modelo.pdb

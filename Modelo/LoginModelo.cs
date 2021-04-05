@@ -41,7 +41,6 @@ namespace Modelos
         public Object[] existe(String nombre, String pass)
         {
             List<SqlParameter> lista_parametros = new List<SqlParameter>();
-
             SqlParameter p1 = new SqlParameter("@nombre", nombre);
             SqlParameter p2 = new SqlParameter("@pass", pass);
 
@@ -53,21 +52,19 @@ namespace Modelos
             SqlDataReader lector = respuesta[0] as SqlDataReader;
             String msg = respuesta[1] as String;
             int counter = 0;
-            while (lector.Read()) counter++;
-
+            while (lector.Read())counter = lector.GetInt32(0);           
             object[] resultados= new object[2];
             resultados[0] = counter;
             resultados[1] = msg;
             return resultados;
+            
         }
-
 
         public Object[] actualizar(String nombre,String pass)
         {
             List<SqlParameter> lista_parametros = new List<SqlParameter>();
             lista_parametros.Add(new SqlParameter("@nombre", nombre));
             lista_parametros.Add(new SqlParameter("@pass", pass));
-
             base_datos.setQuery("UPDATE LOGIN SET nombre=@nombre,pass=@pass");
             return base_datos.affectedRow(lista_parametros);
         }

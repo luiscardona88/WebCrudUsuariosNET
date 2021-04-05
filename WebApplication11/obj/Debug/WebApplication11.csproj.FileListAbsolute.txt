@@ -12,3 +12,16 @@ c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplicat
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Modelo.pdb
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Newtonsoft.Json.xml
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\WebApplication11\bin\Base_Datos.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\WebApplication11.dll.config
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\WebApplication11.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\WebApplication11.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Facade.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Modelo.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Newtonsoft.Json.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Base_Datos.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Facade.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Modelo.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\bin\Base_Datos.pdb
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\obj\Debug\WebApplication11.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\obj\Debug\WebApplication11.dll
+C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\WebApplication11\obj\Debug\WebApplication11.pdb
