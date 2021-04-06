@@ -50,9 +50,6 @@ namespace Facade
         {
             Object[] response = usuario_model.deleteUsuario(estatus,usuario);
             return response;
-
         }
-
-
     }
 }

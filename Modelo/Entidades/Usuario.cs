@@ -14,9 +14,9 @@ namespace Modelos.Entidades
         public int edad;
         public string estados_civil;
         public string telefono;
-        public int id_pais_fk;
+        //public int id_pais_fk;
         public string ciudad;
-        public int id_telefono_fk;
+        //public int id_telefono_fk;
         public String fecha_registro;
         public Usuario(int id_usuario,String nombre,int edad,string estados_civil,string telefono, int id_pais_fk,String ciudad,int id_telefono_fk,string fecha_registro)
         {
@@ -25,9 +25,9 @@ namespace Modelos.Entidades
             this.edad = edad;
             this.estados_civil = estados_civil;
             this.telefono = telefono;
-            this.id_pais_fk = id_pais_fk;
+            //this.id_pais_fk = id_pais_fk;
             this.ciudad = ciudad;
-            this.id_telefono_fk = id_telefono_fk;
+           // this.id_telefono_fk = id_telefono_fk;
             this.fecha_registro = fecha_registro;
 
         }

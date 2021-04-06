@@ -47,7 +47,7 @@ namespace WebApplication11
             DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
             tabla.TableName = "lista_usuarios";
             this.GridView1.DataSource = tabla;
-            this.GridView1.DataMember = "lista_usuarios";
+            this.GridView1.DataMember = "lista_usuarios";    
             this.GridView1.DataBind();
 
         }
@@ -119,9 +119,7 @@ namespace WebApplication11
 
            foreach (System.Collections.DictionaryEntry c in collecion)
             {
-
                 Response.Write("<script>alert(" + c.Value + ")</script>");
-
             }
         }
 
@@ -139,13 +137,13 @@ namespace WebApplication11
                 {
                     
                     this.GridView1.EditIndex = current_index;
-                    var txt_5 = GridView1.Rows[current_index].Cells[5].Text;
-                    var txt_6 = GridView1.Rows[current_index].Cells[6].Text;
-                    var txt_7 = GridView1.Rows[current_index].Cells[7].Text;
-                    var txt_8 = GridView1.Rows[current_index].Cells[8].Text;
-                    var txt_9 = GridView1.Rows[current_index].Cells[9].Text;
-                    var txt_10 = GridView1.Rows[current_index].Cells[10].Text;
-                    var txt_11 = GridView1.Rows[current_index].Cells[11].Text;
+                    var txt_5 = GridView1.Rows[current_index].Cells[6].Text;
+                    var txt_6 = GridView1.Rows[current_index].Cells[7].Text;
+                    var txt_7 = GridView1.Rows[current_index].Cells[8].Text;
+                    var txt_8 = GridView1.Rows[current_index].Cells[9].Text;
+                    var txt_9 = GridView1.Rows[current_index].Cells[10].Text;
+                    var txt_10 = GridView1.Rows[current_index].Cells[11].Text;
+                    var txt_11 = GridView1.Rows[current_index].Cells[12].Text;
 
                     this.TextBox1.Text = txt_5;
                     this.TextBox2.Text = txt_6;
@@ -169,8 +167,7 @@ namespace WebApplication11
 
             }
             else if (evento == "Eliminar")
-            {
-               
+            {               
                 var flag_eliminar = 0;
                 ContactUC.FindControl("Panel1").Visible = true;
                 ContactUC.FindControl("Panel2").Visible = false;
@@ -179,7 +176,7 @@ namespace WebApplication11
                 if( ContactUC.counter_eliminate==true)
                 {
                     //Eliminamos 
-                    int id_usuario = int.Parse(GridView1.Rows[current_index].Cells[5].Text);
+                    int id_usuario = int.Parse(GridView1.Rows[current_index].Cells[6].Text);
                     string resultado=s.borrarUsuario(1, id_usuario).Trim();
 
                     if(resultado=="1")
@@ -202,8 +199,7 @@ namespace WebApplication11
 
             else if(evento=="Actualizar")
             {
-
-                
+               
             }
             
            // Response.Write("<script>alert(" + evento + ")</script>");
@@ -213,7 +209,6 @@ namespace WebApplication11
         {
 
             this.row_lista.Visible = false;
-
             var txt_5 = TextBox1.Text;
             var txt_6 = TextBox2.Text;
             var txt_7 = TextBox3.Text;
@@ -229,7 +224,6 @@ namespace WebApplication11
                 ContactUC.Visible = true;
                 ContactUC.FindControl("Panel1").Visible = false;
                 ContactUC.FindControl("Panel2").Visible = true;
-
                 ContactUC.counter_update = true;
                 ContactUC.counter_eliminate = false;                             
             }
@@ -241,13 +235,11 @@ namespace WebApplication11
             var item = e.Item;
            // Response.Write(item.Text);
             if(item.Text=="Altas")
-            {
-               
+            {              
                 this.row_lista.Visible = false;
                 this.row_edicion.Visible = false;
                 this.row_alta.Visible = true;
              
-
             }
             else if (item.Text == "Inicio")
             {
@@ -255,8 +247,13 @@ namespace WebApplication11
                 this.row_lista.Visible = true;
                 this.row_edicion.Visible = false;
                 this.row_alta.Visible = false;
+            }
 
-
+            else if (item.Text == "Salir")
+            {
+                Session.RemoveAll();
+                Response.Redirect("Login.aspx");
+                
             }
         }
     }

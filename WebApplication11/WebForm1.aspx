@@ -5,10 +5,17 @@
             <div class="row" runat="server" id="row_lista">
              
                 <br />
-                <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="779px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCommand="GridView1_RowCommand" Height="171px">
+                <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCommand="GridView1_RowCommand" Height="171px">
                     <AlternatingRowStyle BackColor="White" />
                
                     <Columns>
+                        <asp:TemplateField>
+
+                             <ItemTemplate>
+        <asp:Image ID="Image1" ImageUrl="https://www.iconninja.com/files/634/848/842/man-user-customer-icon.png" runat="server" Width="50" />
+      </ItemTemplate>
+
+                        </asp:TemplateField>
                         <asp:CommandField ShowSelectButton="True" />
                         <asp:ButtonField ButtonType="Button" CommandName="Eliminar" Text="Eliminar" />
                         <asp:ButtonField ButtonType="Button" CommandName="Editar" Text="Editar" />
@@ -199,12 +206,12 @@
                 <DynamicMenuStyle BackColor="#B5C7DE" />
                 <DynamicSelectedStyle BackColor="#507CD1" />
                 <Items>
-                    <asp:MenuItem Text="Inicio" Value="Inicio"></asp:MenuItem>
-                    <asp:MenuItem Text="Altas" Value="Altas"></asp:MenuItem>
-                    <asp:MenuItem Text="Detalles" Value="Detalles"></asp:MenuItem>
-                    <asp:MenuItem Text="Contacto" Value="Contacto"></asp:MenuItem>
-                    <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
-                    <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+                    <asp:MenuItem Text="Inicio" Value="Inicio" ImageUrl="~/imagenes/home.jpg"></asp:MenuItem>
+                    <asp:MenuItem Text="Altas" Value="Altas" ImageUrl="~/imagenes/insert_new.png"></asp:MenuItem>
+                    <asp:MenuItem Text="Detalles" Value="Detalles" ImageUrl="~/imagenes/view-details.png"></asp:MenuItem>
+                    <asp:MenuItem Text="Contacto" Value="Contacto" ImageUrl="~/imagenes/email.jpg"></asp:MenuItem>
+                    <asp:MenuItem Text="About" Value="About" ImageUrl="~/imagenes/about-icon-png-13.jpg"></asp:MenuItem>
+                    <asp:MenuItem Text="Salir" Value="Salir" ImageUrl="~/imagenes/exit.png"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />

@@ -65,6 +65,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="imagenes\about-icon-png-13.jpg" />
+    <Content Include="imagenes\about.jpg" />
+    <Content Include="imagenes\email.jpg" />
+    <Content Include="imagenes\exit.png" />
+    <Content Include="imagenes\home.jpg" />
+    <Content Include="imagenes\insert_new.png" />
+    <Content Include="imagenes\view-details.png" />
     <Content Include="Login.aspx" />
     <Content Include="LOGO.png" />
     <Content Include="WebUserControl1.ascx" />

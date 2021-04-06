@@ -21,8 +21,8 @@ namespace Modelos
 
        public List<Usuario> Listar()
         {
-            
-            base_datos.setQuery("SELECT * FROM USUARIO WHERE ESTATUS_BORRADO=0");
+
+            base_datos.setQuery("SELECT id_usuario,nombre,apellido,edad,estados_civil,telefono,ciudad,fecha_registro FROM USUARIO WHERE ESTATUS_BORRADO=0");
 
             SqlDataReader lector = (base_datos.getLista())[0] as SqlDataReader;
            
@@ -37,12 +37,12 @@ namespace Modelos
 
                 //String pais_value = (lector[6].ToString()) == String.Empty ?"0" : lector[6].ToString();
 
-                int id_pais_fk = (lector[6].ToString()) == String.Empty ? 0 : int.Parse(lector[6].ToString());
-                String ciudad = lector[7].ToString();
-                int id_telefono_fk = (lector[8].ToString()) == String.Empty ? 0 : int.Parse(lector[8].ToString()); ;
-                string fecha_registro = lector[9].ToString(); ;
+              //  int id_pais_fk = (lector[6].ToString()) == String.Empty ? 0 : int.Parse(lector[6].ToString());
+                String ciudad = lector[6].ToString();
+                //int id_telefono_fk = (lector[8].ToString()) == String.Empty ? 0 : int.Parse(lector[8].ToString()); ;
+                string fecha_registro = lector[7].ToString(); ;
 
-                Usuario usuario = new Usuario(id_usuario, nombre, edad, estados_civil, telefono, id_pais_fk, ciudad, id_telefono_fk, fecha_registro);
+                Usuario usuario = new Usuario(id_usuario, nombre, edad, estados_civil, telefono, 0, ciudad, 0, fecha_registro);
                 
                 lista_regresa.Add(usuario);
 

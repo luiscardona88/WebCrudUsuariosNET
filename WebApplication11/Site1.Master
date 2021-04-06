@@ -6,6 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -22,7 +23,7 @@
                 <DynamicMenuStyle BackColor="#B5C7DE" />
                 <DynamicSelectedStyle BackColor="#507CD1" />
                 <Items>
-                    <asp:MenuItem Text="Inicio" Value="Inicio"></asp:MenuItem>
+                    <asp:MenuItem Text="Inicio" Value="Inicio" ImageUrl="~/imagenes/home.jpg"></asp:MenuItem>
                     <asp:MenuItem Text="Detalles" Value="Detalles"></asp:MenuItem>
                     <asp:MenuItem Text="Contacto" Value="Contacto"></asp:MenuItem>
                     <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
