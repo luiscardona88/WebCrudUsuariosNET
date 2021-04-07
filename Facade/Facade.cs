@@ -11,13 +11,20 @@ namespace Facade
     {
         Modelos.UsuarioModelo usuario_model;
         Modelos.LoginModelo login_modelo;
+        Modelos.EmailModelo email_modelo;
         public Facade()
         {
             usuario_model = new UsuarioModelo();
             login_modelo = new LoginModelo();
+            email_modelo = new EmailModelo();
         }
 
 
+        public int enviarCorreo()
+        {
+
+            return email_modelo.enviarCorreo();
+        }
         public string existeLogin(String Usuario,String Password)
         {
             string response = Newtonsoft.Json.JsonConvert.SerializeObject(login_modelo.existe(Usuario, Password));

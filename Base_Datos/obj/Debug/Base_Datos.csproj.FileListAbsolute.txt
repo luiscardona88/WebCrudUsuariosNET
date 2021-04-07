@@ -4,6 +4,5 @@ c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\
 c:\users\luis\documents\visual studio 2013\Projects\WebApplication11\Base_Datos\obj\Debug\Base_Datos.pdb
 C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Base_Datos\bin\Debug\Base_Datos.dll
 C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Base_Datos\bin\Debug\Base_Datos.pdb
-C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Base_Datos\obj\Debug\Base_Datos.csprojResolveAssemblyReference.cache
 C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Base_Datos\obj\Debug\Base_Datos.dll
 C:\Users\Luis\Documents\Visual Studio 2013\Projects\WebApplication11\WebCrudUsuarios\WebCrudUsuariosNET\Base_Datos\obj\Debug\Base_Datos.pdb

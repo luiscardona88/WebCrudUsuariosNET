@@ -34,11 +34,9 @@ namespace WebApplication11
             catch(Exception ex)
             {
 
-
             }
             
         }
-
 
         public void llenarGrid()
         {
@@ -162,9 +160,7 @@ namespace WebApplication11
                     Response.Write("<script>alert('FAVOR DE VERIFICAR QUE EL REGISTRO ESTE SELECCIONADO'); </script>");
                     return;
                 }
-               
-                
-
+                              
             }
             else if (evento == "Eliminar")
             {               
@@ -182,9 +178,7 @@ namespace WebApplication11
                     if(resultado=="1")
                     {
                         Response.Write("Eliminado con exito!!!");
-
                     }
-
                 }
 
             }
@@ -254,6 +248,20 @@ namespace WebApplication11
                 Session.RemoveAll();
                 Response.Redirect("Login.aspx");
                 
+            }
+
+            else if (item.Text == "Detalles")
+            {
+                String datos = s.listarUsuarios();
+                DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
+                Reportes.Reporte reporte = new Reportes.Reporte();
+                reporte.fill_Report(tabla);
+
+            }
+
+            else if (item.Text == "Contacto")
+            {
+                s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
             }
         }
     }

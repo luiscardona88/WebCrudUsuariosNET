@@ -82,6 +82,16 @@ namespace WebApplication11
 
         }
 
+        [OperationContract]
+        [WebInvoke]
+
+        public int enviarCorreo(String[] datosEmail)
+        {
+
+            return f.enviarCorreo();
+
+        }
+
         // Agregue aquí más operaciones y márquelas con [OperationContract]
     }
 }

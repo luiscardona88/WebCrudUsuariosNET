@@ -18,6 +18,36 @@
   <wsdl:message name="Service1_saludo_OutputMessage">
     <wsdl:part name="parameters" element="saludoResponse" />
   </wsdl:message>
+  <wsdl:message name="Service1_listarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="listarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="Service1_listarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="listarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_existeLogin_InputMessage">
+    <wsdl:part name="parameters" element="existeLogin" />
+  </wsdl:message>
+  <wsdl:message name="Service1_existeLogin_OutputMessage">
+    <wsdl:part name="parameters" element="existeLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_actualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="actualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="Service1_actualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="actualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_nuevoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="nuevoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="Service1_nuevoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="nuevoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_borrarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="borrarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="Service1_borrarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="borrarUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service1">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="urn:Service1/DoWork" message="Service1_DoWork_InputMessage" />
@@ -26,6 +56,26 @@
     <wsdl:operation name="saludo">
       <wsdl:input wsaw:Action="urn:Service1/saludo" message="Service1_saludo_InputMessage" />
       <wsdl:output wsaw:Action="urn:Service1/saludoResponse" message="Service1_saludo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <wsdl:input wsaw:Action="urn:Service1/listarUsuarios" message="Service1_listarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/listarUsuariosResponse" message="Service1_listarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="existeLogin">
+      <wsdl:input wsaw:Action="urn:Service1/existeLogin" message="Service1_existeLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/existeLoginResponse" message="Service1_existeLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUsuario">
+      <wsdl:input wsaw:Action="urn:Service1/actualizarUsuario" message="Service1_actualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/actualizarUsuarioResponse" message="Service1_actualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoUsuario">
+      <wsdl:input wsaw:Action="urn:Service1/nuevoUsuario" message="Service1_nuevoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/nuevoUsuarioResponse" message="Service1_nuevoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarUsuario">
+      <wsdl:input wsaw:Action="urn:Service1/borrarUsuario" message="Service1_borrarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/borrarUsuarioResponse" message="Service1_borrarUsuario_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

@@ -26,6 +26,36 @@ namespace WebApplication11.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/saludo", ReplyAction="urn:Service1/saludoResponse")]
         System.Threading.Tasks.Task<string> saludoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/listarUsuarios", ReplyAction="urn:Service1/listarUsuariosResponse")]
+        string listarUsuarios();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/listarUsuarios", ReplyAction="urn:Service1/listarUsuariosResponse")]
+        System.Threading.Tasks.Task<string> listarUsuariosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/existeLogin", ReplyAction="urn:Service1/existeLoginResponse")]
+        string existeLogin(string usuario, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/existeLogin", ReplyAction="urn:Service1/existeLoginResponse")]
+        System.Threading.Tasks.Task<string> existeLoginAsync(string usuario, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/actualizarUsuario", ReplyAction="urn:Service1/actualizarUsuarioResponse")]
+        string actualizarUsuario(string nombre, string apellido, string edad, string estados_civil, string telefono, string ciudad, int id_usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/actualizarUsuario", ReplyAction="urn:Service1/actualizarUsuarioResponse")]
+        System.Threading.Tasks.Task<string> actualizarUsuarioAsync(string nombre, string apellido, string edad, string estados_civil, string telefono, string ciudad, int id_usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/nuevoUsuario", ReplyAction="urn:Service1/nuevoUsuarioResponse")]
+        string nuevoUsuario(string nombre, string apellido, int edad, int estados_civil, string telefono, string ciudad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/nuevoUsuario", ReplyAction="urn:Service1/nuevoUsuarioResponse")]
+        System.Threading.Tasks.Task<string> nuevoUsuarioAsync(string nombre, string apellido, int edad, int estados_civil, string telefono, string ciudad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/borrarUsuario", ReplyAction="urn:Service1/borrarUsuarioResponse")]
+        string borrarUsuario(int estatus, int id_usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/borrarUsuario", ReplyAction="urn:Service1/borrarUsuarioResponse")]
+        System.Threading.Tasks.Task<string> borrarUsuarioAsync(int estatus, int id_usuario);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +99,46 @@ namespace WebApplication11.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> saludoAsync() {
             return base.Channel.saludoAsync();
+        }
+        
+        public string listarUsuarios() {
+            return base.Channel.listarUsuarios();
+        }
+        
+        public System.Threading.Tasks.Task<string> listarUsuariosAsync() {
+            return base.Channel.listarUsuariosAsync();
+        }
+        
+        public string existeLogin(string usuario, string pass) {
+            return base.Channel.existeLogin(usuario, pass);
+        }
+        
+        public System.Threading.Tasks.Task<string> existeLoginAsync(string usuario, string pass) {
+            return base.Channel.existeLoginAsync(usuario, pass);
+        }
+        
+        public string actualizarUsuario(string nombre, string apellido, string edad, string estados_civil, string telefono, string ciudad, int id_usuario) {
+            return base.Channel.actualizarUsuario(nombre, apellido, edad, estados_civil, telefono, ciudad, id_usuario);
+        }
+        
+        public System.Threading.Tasks.Task<string> actualizarUsuarioAsync(string nombre, string apellido, string edad, string estados_civil, string telefono, string ciudad, int id_usuario) {
+            return base.Channel.actualizarUsuarioAsync(nombre, apellido, edad, estados_civil, telefono, ciudad, id_usuario);
+        }
+        
+        public string nuevoUsuario(string nombre, string apellido, int edad, int estados_civil, string telefono, string ciudad) {
+            return base.Channel.nuevoUsuario(nombre, apellido, edad, estados_civil, telefono, ciudad);
+        }
+        
+        public System.Threading.Tasks.Task<string> nuevoUsuarioAsync(string nombre, string apellido, int edad, int estados_civil, string telefono, string ciudad) {
+            return base.Channel.nuevoUsuarioAsync(nombre, apellido, edad, estados_civil, telefono, ciudad);
+        }
+        
+        public string borrarUsuario(int estatus, int id_usuario) {
+            return base.Channel.borrarUsuario(estatus, id_usuario);
+        }
+        
+        public System.Threading.Tasks.Task<string> borrarUsuarioAsync(int estatus, int id_usuario) {
+            return base.Channel.borrarUsuarioAsync(estatus, id_usuario);
         }
     }
 }
