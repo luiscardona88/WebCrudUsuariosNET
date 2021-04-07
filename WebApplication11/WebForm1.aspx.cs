@@ -16,19 +16,18 @@ namespace WebApplication11
         WebApplication11.Service1 s;
         protected void Page_Load(object sender, EventArgs e)
         {
-
              s= new Service1();
              this.row_edicion.Visible = false;
              this.row_alta.Visible = false;
+             this.div_contacto.Visible = false;
+
             try
             {
-
                 if (!IsPostBack)
                 {
                     llenarGrid();
 
                 }
-
             }
 
             catch(Exception ex)
@@ -39,8 +38,7 @@ namespace WebApplication11
         }
 
         public void llenarGrid()
-        {
-           
+        {           
             String datos = s.listarUsuarios();
             DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
             tabla.TableName = "lista_usuarios";
@@ -261,7 +259,11 @@ namespace WebApplication11
 
             else if (item.Text == "Contacto")
             {
-                s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
+                this.row_lista.Visible = false;
+                this.row_edicion.Visible = false;
+                this.row_alta.Visible = false;
+                this.div_contacto.Visible = true;                
+                //s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
             }
         }
     }

@@ -10,10 +10,8 @@ using System.Threading.Tasks;
 {
    public class EmailModelo
     {
-
         public int enviarCorreo()
         {
-
             try
             {
 
@@ -23,14 +21,12 @@ using System.Threading.Tasks;
                 System.Net.Mail.SmtpClient cliente = new   System.Net.Mail.SmtpClient();
                  cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
                  cliente.Credentials = new NetworkCredential(fromAddress, fromPassword);
-
                  cliente.Host = "smtp.gmail.com";
-              
                 cliente.Port = 587;
                 cliente.EnableSsl = true;
+
                 MailMessage msg= new MailMessage(fromAddress,fromAddress,"Pruebas","Mensaje de Pruebas");
                 cliente.Send(msg);
-
                 return 1;
 
             }
@@ -39,7 +35,6 @@ using System.Threading.Tasks;
                 return 0;
             }
           
-
         }
     }
 }

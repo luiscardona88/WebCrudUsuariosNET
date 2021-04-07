@@ -50,43 +50,43 @@
             <tr>
                 <td class="auto-style3">Id Usuario</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="343px" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="343px" ReadOnly="True" Height="34px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Nombre</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" Width="343px" Height="31px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Apellido</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" Width="343px" Height="29px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Edad</td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" Width="343px" Height="31px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Estado Civil</td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" Width="343px" Height="32px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Telefono</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox6" runat="server" Width="343px" Height="29px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Ciudad</td>
                 <td>
-                    <asp:TextBox ID="TextBox7" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox7" runat="server" Width="343px" Height="29px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -124,37 +124,37 @@
             <tr>
                 <td class="auto-style3">Nombre</td>
                 <td>
-                    <asp:TextBox ID="TextBox9" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox9" runat="server" Width="343px" Height="32px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Apellido</td>
                 <td>
-                    <asp:TextBox ID="TextBox10" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox10" runat="server" Width="343px" Height="36px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Edad</td>
                 <td>
-                    <asp:TextBox ID="TextBox11" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox11" runat="server" Width="343px" Height="32px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Estado Civil</td>
                 <td>
-                    <asp:TextBox ID="TextBox12" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox12" runat="server" Width="343px" Height="31px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Telefono</td>
                 <td>
-                    <asp:TextBox ID="TextBox13" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox13" runat="server" Width="343px" Height="33px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Ciudad</td>
                 <td>
-                    <asp:TextBox ID="TextBox14" runat="server" Width="343px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox14" runat="server" Width="343px" Height="31px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -179,6 +179,72 @@
 
     </div>
 
+
+
+    
+        <div class="row" id="div_contacto" runat="server">
+        <br />
+        <table class="auto-style1" runat="server" id="Table2">
+            <tr>
+                <td class="auto-style2" colspan="2" style="background-color: #3366CC; color: #FFFFFF; font-weight: bold;">CONTACTO</td>
+            </tr>
+            
+            <tr>
+                <td class="auto-style3">Nombre</td>
+                <td>
+                    <asp:TextBox ID="TextBox8" runat="server" Width="343px" Height="41px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Correo</td>
+                <td>
+                    <asp:TextBox ID="TextBox15" runat="server" Width="343px" Height="38px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Asunto</td>
+                <td>
+                    <asp:TextBox ID="TextBox17" runat="server" Width="343px" Height="64px" TextMode="MultiLine"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>
+                    <asp:FileUpload ID="FileUpload1" runat="server" Height="30px" Width="380px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button3" runat="server" OnClick="Button2_Click" style="margin-left: 77px" Text="CONTACTAR" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">   &nbsp;</td>
+                </tr>
+            </tfoot>
+        </table>
+     
+        <br />
+        <br />
+
+
+    </div>
 
         </asp:Content>
 
