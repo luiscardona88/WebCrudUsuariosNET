@@ -12,7 +12,6 @@ namespace WebApplication11
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-
         WebApplication11.Service1 s;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +19,7 @@ namespace WebApplication11
              this.row_edicion.Visible = false;
              this.row_alta.Visible = false;
              this.div_contacto.Visible = false;
-
+             this.div_movie.Visible = false;
             try
             {
                 if (!IsPostBack)
@@ -56,7 +55,6 @@ namespace WebApplication11
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
             try
             {
                 var txt_5 = TextBox9.Text;
@@ -196,7 +194,6 @@ namespace WebApplication11
                 ContactUC.counter_eliminate = false;
             }
 
-
             else if(evento=="Actualizar")
             {
                
@@ -233,17 +230,19 @@ namespace WebApplication11
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
         {
             var item = e.Item;
-           // Response.Write(item.Text);
-            if(item.Text=="Altas")
-            {              
+            // Response.Write(item.Text);
+            if (item.Text == "Altas")
+            {
+                this.div_movie.Visible = false;
                 this.row_lista.Visible = false;
                 this.row_edicion.Visible = false;
                 this.row_alta.Visible = true;
-             
+
             }
             else if (item.Text == "Inicio")
             {
                 Response.Redirect("WebForm1.aspx");
+                this.div_movie.Visible = false;
                 this.row_lista.Visible = true;
                 this.row_edicion.Visible = false;
                 this.row_alta.Visible = false;
@@ -253,11 +252,12 @@ namespace WebApplication11
             {
                 Session.RemoveAll();
                 Response.Redirect("Login.aspx");
-                
+
             }
 
             else if (item.Text == "Detalles")
             {
+                this.div_movie.Visible = false;
                 String datos = s.listarUsuarios();
                 DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
                 Reportes.Reporte reporte = new Reportes.Reporte();
@@ -267,12 +267,31 @@ namespace WebApplication11
 
             else if (item.Text == "Contacto")
             {
+                this.div_movie.Visible = false;
                 this.row_lista.Visible = false;
                 this.row_edicion.Visible = false;
                 this.row_alta.Visible = false;
-                this.div_contacto.Visible = true;                
+                this.div_contacto.Visible = true;
                 //s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
             }
+
+            else if (item.Text == "Peliculas")
+            {
+                String datos = s.listarPeliculas();
+                System.Data.DataTable tabla = JsonConvert.DeserializeObject<System.Data.DataTable>(datos);
+                tabla.TableName = "peliculas";
+                this.GridView2.DataSource = tabla;
+                this.GridView2.DataMember = "peliculas";
+                this.GridView2.DataBind();
+
+                this.row_lista.Visible = false;
+                this.row_edicion.Visible = false;
+                this.row_alta.Visible = false;
+                this.div_contacto.Visible = false;
+                this.div_movie.Visible = true;
+                //s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
+            }
+
         }
 
         protected void FileUpload1_Load(object sender, EventArgs e)
