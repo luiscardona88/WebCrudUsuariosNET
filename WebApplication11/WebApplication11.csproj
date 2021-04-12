@@ -71,9 +71,11 @@
     <Content Include="imagenes\exit.png" />
     <Content Include="imagenes\home.jpg" />
     <Content Include="imagenes\insert_new.png" />
+    <Content Include="imagenes\movie.png" />
     <Content Include="imagenes\view-details.png" />
     <Content Include="Login.aspx" />
     <Content Include="LOGO.png" />
+    <Content Include="WebFormPeliculas.aspx" />
     <Content Include="WebUserControl1.ascx" />
     <None Include="Service References\ServiceReference1\Service1.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
@@ -127,6 +129,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormPeliculas.aspx.cs">
+      <DependentUpon>WebFormPeliculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormPeliculas.aspx.designer.cs">
+      <DependentUpon>WebFormPeliculas.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebUserControl1.ascx.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>

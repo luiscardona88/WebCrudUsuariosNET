@@ -12,11 +12,13 @@ namespace Facade
         Modelos.UsuarioModelo usuario_model;
         Modelos.LoginModelo login_modelo;
         Modelos.EmailModelo email_modelo;
+        Modelos.PeliculasModelo peliculas_modelo;
         public Facade()
         {
             usuario_model = new UsuarioModelo();
             login_modelo = new LoginModelo();
             email_modelo = new EmailModelo();
+            peliculas_modelo = new PeliculasModelo();
         }
 
 
@@ -36,6 +38,16 @@ namespace Facade
         string response = Newtonsoft.Json.JsonConvert.SerializeObject(usuario_model.Listar());
         return response;
     }
+
+
+           public string listarPeliculas()
+    {
+
+        string response = Newtonsoft.Json.JsonConvert.SerializeObject(peliculas_modelo.Listar());
+        return response;
+    }
+
+
 
         public string actualizarUsuario(String nombre, String apellido, String edad, String estados_civil, String telefono, String ciudad,int id_usuario)
         {

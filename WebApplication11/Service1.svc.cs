@@ -92,6 +92,16 @@ namespace WebApplication11
 
         }
 
+        [OperationContract]
+        [WebGet]
+
+        public string listarPeliculas()
+        {
+
+            return f.listarPeliculas();
+
+        }
+
         // Agregue aquí más operaciones y márquelas con [OperationContract]
     }
 }

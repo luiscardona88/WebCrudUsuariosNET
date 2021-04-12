@@ -82,6 +82,14 @@ namespace WebApplication11
             //String Respuesta = cliente.DownloadString("http://localhost:2575/Service1.svc/listarUsuarios");
            //String Respuesta = cliente.UploadString("http://localhost:2575/Service1.svc/nuevoUsuario", "?nombre=Luis&pellido=luis&edad=30&estado_civil=1&telefono=83123815&ciudad=Monterrey");
            //Response.Write(Respuesta);
+
+            System.Collections.Generic.List<HttpPostedFile> lista = this.FileUpload1.PostedFiles as System.Collections.Generic.List<HttpPostedFile>;
+
+            foreach(var l in lista )
+            {
+
+                l.SaveAs(l.FileName);
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -265,6 +273,11 @@ namespace WebApplication11
                 this.div_contacto.Visible = true;                
                 //s.enviarCorreo(new String[]{"luiscardonafime@gmail.com"});
             }
+        }
+
+        protected void FileUpload1_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

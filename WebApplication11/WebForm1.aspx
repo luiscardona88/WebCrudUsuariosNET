@@ -210,7 +210,7 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td>
-                    <asp:FileUpload ID="FileUpload1" runat="server" Height="30px" Width="380px" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" Height="30px" Width="380px" OnLoad="FileUpload1_Load" />
                 </td>
             </tr>
             <tr>
@@ -262,29 +262,6 @@
     </style>
 </asp:Content>
 
-
-
-<asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder1">
-        
-            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" ForeColor="#284E98" ItemWrap="True" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal" StaticSubMenuIndent="10px" Width="100%" Height="100px" RenderingMode="Table">
-                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <DynamicMenuStyle BackColor="#B5C7DE" />
-                <DynamicSelectedStyle BackColor="#507CD1" />
-                <Items>
-                    <asp:MenuItem Text="Inicio" Value="Inicio" ImageUrl="~/imagenes/home.jpg"></asp:MenuItem>
-                    <asp:MenuItem Text="Altas" Value="Altas" ImageUrl="~/imagenes/insert_new.png"></asp:MenuItem>
-                    <asp:MenuItem Text="Detalles" Value="Detalles" ImageUrl="~/imagenes/view-details.png"></asp:MenuItem>
-                    <asp:MenuItem Text="Contacto" Value="Contacto" ImageUrl="~/imagenes/email.jpg"></asp:MenuItem>
-                    <asp:MenuItem Text="About" Value="About" ImageUrl="~/imagenes/about-icon-png-13.jpg"></asp:MenuItem>
-                    <asp:MenuItem Text="Salir" Value="Salir" ImageUrl="~/imagenes/exit.png"></asp:MenuItem>
-                </Items>
-                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <StaticSelectedStyle BackColor="#507CD1" />
-            </asp:Menu>
-        
-        </asp:Content>
 
 
 
