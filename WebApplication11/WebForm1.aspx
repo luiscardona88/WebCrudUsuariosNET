@@ -34,6 +34,9 @@
             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
+
+
+          
         </asp:GridView>
         <br />
         <br />
@@ -231,15 +234,77 @@
         </table>
 
         <br />
+
+          
+
+        
         <br />
 
     </div>
 
     <div class="row" id="div_movie" runat="server">
+        Nombre:<asp:TextBox ID="TextBox18" runat="server" Width="649px" style="margin-top: 0px" OnTextChanged="TextBox18_TextChanged"></asp:TextBox>
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Buscar" Width="145px" OnInit="Button5_Click" />
+                
+        
+        
+        
+        
+        
+        <br />
+        <br />
+        <!--
+        <table class="auto-style1 tabla" id="tabla_buscar_usuario" runat="server">
+            <tr>
+                <td class="auto-style4">id_usuario</td>
+                <td class="auto-style4">nombre</td>
+                <td class="auto-style4">apellido</td>
+                <td class="auto-style4">edad</td>
+                <td class="auto-style4">edo civil</td>
+                <td class="auto-style4">Telefono</td>
+                <td class="auto-style4">Ciudad</td>
+                <td class="auto-style4">fecha registro</td>
+            </tr>
+            
+        </table>!-->
+                
+        
+        
+        
+        
+        
+        <asp:GridView ID="GridView3" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%"  AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+        
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">
+        </asp:ScriptManagerProxy>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="conditional">
+            <ContentTemplate>
+               <!-- <asp:Timer ID="Timer1" runat="server" Interval="3600" ontick="Timer1_Tick"></asp:Timer>!-->
+              
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Button5" EventName="Click" />
+                <asp:AsyncPostBackTrigger ControlID="GridView3" EventName="Unload" />
+                <asp:AsyncPostBackTrigger ControlID="GridView3" EventName="PageIndexChanged" />
+            </Triggers>
+        </asp:UpdatePanel>
+
 
         <br />
-        Nombre:<input type="text" name="nombre" style="height: 17px; width: 432px" />
-        <button type="button" style="display: inline; width: 111px; height: 23px;">Buscar</button>
         <br />
         <br />
 
@@ -273,9 +338,51 @@
 
                 </asp:TemplateField>
             </Columns>
+
+              <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                       CANTIDAD
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        
+                       <asp:TextBox runat="server" Width="50" ID="cantid_a_restar" />
+                    </ItemTemplate>
+
+                </asp:TemplateField>
+               
+            </Columns>
+
+
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                       TIPO
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <asp:DropDownList  runat="server"  ID="tipo">
+                             <asp:ListItem Text="Comprar" Value="0">------</asp:ListItem>
+                            <asp:ListItem Text="Comprar" Value="1"></asp:ListItem>
+                             <asp:ListItem Text="Rentar" Value="2"></asp:ListItem>
+                        </asp:DropDownList>
+                     
+                    </ItemTemplate>
+
+                </asp:TemplateField>
+               
+            </Columns>
+
+
         </asp:GridView>
-        <asp:Button ID="Button4" runat="server" Height="41px" Style="margin-left: 508px; background-color: #507CD1; color: white; border-radius: 50px" Text="Comprar/Rentar" Width="500px" />
+        <asp:Button ID="Button4" runat="server" Height="41px" Style="margin-left: 508px; background-color: #507CD1; color: white; border-radius: 50px" Text="Comprar/Rentar" Width="500px" OnClick="Button4_Click" PostBackUrl="~/WebForm1.aspx" />
     </div>
+
+
+
+
+
+
+
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
@@ -290,10 +397,15 @@
         .auto-style3 {
             width: 376px;
         }
+        .auto-style4 {
+            height: 23px;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+
+    <asp:TextBox ID="TextBox16" runat="server" Visible="False"></asp:TextBox>
 
     <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" ForeColor="#284E98" ItemWrap="True" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal" StaticSubMenuIndent="10px" Width="100%" Height="100px" RenderingMode="Table">
         <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />

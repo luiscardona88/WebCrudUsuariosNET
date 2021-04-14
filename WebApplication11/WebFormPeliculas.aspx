@@ -6,8 +6,8 @@
         <body>
             <div>
                 <br />
-                Nombre:<input type="text" name="nombre" style="height: 17px; width: 432px" />
-                <button type="button" style="display: inline; width: 111px; height: 23px;">Buscar</button>
+                Nombre:<asp:TextBox ID="TextBox1" runat="server" Width="566px"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buscar" Width="169px" />
                 <br />
                 <br />
                 <!--

@@ -48,6 +48,14 @@ namespace WebApplication11
 
         }
 
+
+         [OperationContract]
+        [WebGet]
+          public String buscarUsuario(String usuario_param)
+        {
+            return this.f.buscarUsuario(usuario_param);
+        }
+
         [OperationContract]
         [WebGet]
         public String existeLogin(String usuario, String pass)
@@ -91,6 +99,21 @@ namespace WebApplication11
             return f.enviarCorreo();
 
         }
+
+
+      
+
+
+        [OperationContract]
+        [WebInvoke]
+
+        public System.Collections.Generic.List<Object[]> confirmarRenta_Compra(System.Collections.Generic.List<String[]> lista_to_insert)
+        {
+
+            return f.confirmarRenta_Compra(lista_to_insert);
+
+        }
+
 
         [OperationContract]
         [WebGet]

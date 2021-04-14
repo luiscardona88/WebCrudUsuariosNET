@@ -69,13 +69,19 @@ namespace Base_Datos
                 return resultados;
             }
 
-        public Object[] affectedRow(List<SqlParameter> lista_parametros)
+        public Object[] affectedRow(List<SqlParameter> lista_parametros,int direccion_param_store=0)
         {
             try
             {
                 comando = new SqlCommand();
                 comando.Connection = this.conexion;
                 comando.CommandText = this.getQuery();
+                if (direccion_param_store>=1)
+                {
+
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    
+                }
                 if (lista_parametros != null && lista_parametros.Count > 0)
                 {
                     foreach (SqlParameter p in lista_parametros)

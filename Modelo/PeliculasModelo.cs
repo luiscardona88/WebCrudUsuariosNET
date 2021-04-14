@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections.Generic;
 namespace Modelos
 {
     public class PeliculasModelo
@@ -18,6 +18,44 @@ namespace Modelos
             this.lista_regresa = new List<Pelicula>();
         }
 
+
+
+        public System.Collections.Generic.List<Object[]> confirmarRenta_Compra(System.Collections.Generic.List<String[]> lista)
+        {
+
+            System.Collections.Generic.List<Object[]> respuesta= new List<Object[]>();
+
+            try
+            {
+            foreach(var l in lista)
+            {
+              String []row=(l as String[]);
+
+             List<SqlParameter> lista_parametros = new List<SqlParameter>();
+             SqlParameter p1 = new SqlParameter("@id_usuario", row[0]);
+             SqlParameter p2 = new SqlParameter("@id_pelicula",  row[1]);
+             SqlParameter p3 = new SqlParameter("@cantidad", row[2]);
+
+
+             lista_parametros.Add(p1);
+             lista_parametros.Add(p2);
+              lista_parametros.Add(p3);
+
+             base_datos.setQuery("reservaPelicula");
+            respuesta.Add(base_datos.affectedRow(lista_parametros,1));
+
+            }
+
+                return respuesta;
+            }
+
+            catch(Exception ex)
+            {
+                return null;
+            }
+             
+         }
+        
 
         public List<Pelicula> Listar()
         {

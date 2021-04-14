@@ -8,11 +8,13 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using System.Data;
 using System.Threading;
+using System.Web.Script.Serialization;
 namespace WebApplication11
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
         WebApplication11.Service1 s;
+        public string id_usuario_prop{get;set;}
         protected void Page_Load(object sender, EventArgs e)
         {
              s= new Service1();
@@ -36,6 +38,11 @@ namespace WebApplication11
             
         }
 
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            GridView3.DataBind();
+        }
         public void llenarGrid()
         {           
             String datos = s.listarUsuarios();
@@ -74,7 +81,6 @@ namespace WebApplication11
             {
 
             }
-
 
             //System.Net.WebClient cliente = new System.Net.WebClient();
             //String Respuesta = cliente.DownloadString("http://localhost:2575/Service1.svc/listarUsuarios");
@@ -124,7 +130,7 @@ namespace WebApplication11
                 Response.Write("<script>alert(" + c.Value + ")</script>");
             }
         }
-
+        
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             String evento = e.CommandName;
@@ -298,5 +304,60 @@ namespace WebApplication11
         {
            
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            System.Collections.Generic.List<String[]> lista = new List<string[]>();
+           string id_prop = (Session["id_usuario"] != null) ? Session["id_usuario"].ToString() : "0";
+            foreach (GridViewRow row in this.GridView2.Rows)
+         {
+             if((row.Cells[0].FindControl("check") as CheckBox).Checked==true)
+             {
+                 var cantidad = (row.Cells[0].FindControl("cantid_a_restar") as TextBox).Text;
+                 var id_pelicula = row.Cells[4].Text;
+                 var tipo = (row.Cells[5].FindControl("tipo") as DropDownList).SelectedValue;
+                 lista.Add(new String[] { id_prop, id_pelicula, cantidad, tipo });
+                 //Response.Write("la cantidad es:" + cantidad + "el id de usuario es:" + id_pelicula + " el tipo es:" + tipo);                 
+             }
+         }
+            s.confirmarRenta_Compra(lista);
+            Response.Redirect("WebForm1.aspx");
+
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        
+        {
+
+            s = new Service1();
+            if (sender!=null)
+            {
+                
+                    String datos = s.buscarUsuario(this.TextBox18.Text);
+                    DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
+                    tabla.TableName = "lista_usuarios";                      
+                   // GridView vista = new GridView();
+                    this.GridView3.AutoGenerateColumns = true;
+
+                    this.GridView3.DataSource = tabla;
+                    this.GridView3.DataMember = "lista_usuarios";
+                    this.GridView3.DataBind();
+                                                 
+            }
+        }
+
+        protected void TextBox18_TextChanged(object sender, EventArgs e)
+        {                         
+            }
+       
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int current_index = (sender as GridView).SelectedIndex;
+            var txt_id_usuario = GridView3.Rows[current_index].Cells[1].Text;
+           // this.id_usuario_prop = txt_id_usuario;
+            //TextBox16.Text = txt_id_usuario;
+            Session["id_usuario"] = txt_id_usuario;
+            //Response.Write("<script>alert(" + txt_id_usuario+")</script>");
+        }
+        }
     }
-}

@@ -147,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
+    <None Include="Service References\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

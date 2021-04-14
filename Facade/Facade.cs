@@ -39,7 +39,17 @@ namespace Facade
         return response;
     }
 
+        public String buscarUsuario(String usuario_param)
+        {
 
+           List<Usuario> lista= usuario_model.Listar();
+             var x= from u in lista
+                    where u.nombre.Contains(usuario_param) || u.nombre.EndsWith(usuario_param)
+                    select u;
+
+             string response = Newtonsoft.Json.JsonConvert.SerializeObject(x);
+             return response;
+        }
            public string listarPeliculas()
     {
 
@@ -69,6 +79,12 @@ namespace Facade
         {
             Object[] response = usuario_model.deleteUsuario(estatus,usuario);
             return response;
+        }
+
+
+        public System.Collections.Generic.List<Object[]>  confirmarRenta_Compra(System.Collections.Generic.List<String[]> lista)
+        {
+            return peliculas_modelo.confirmarRenta_Compra(lista);        
         }
     }
 }

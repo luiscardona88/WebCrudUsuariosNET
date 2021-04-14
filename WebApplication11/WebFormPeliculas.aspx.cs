@@ -23,5 +23,17 @@ namespace WebApplication11
             this.GridView1.DataBind();
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String buscar = this.TextBox1.Text;
+            String datos = s.listarUsuarios();
+          var busca_en = from u in datos
+                              where datos.Contains(buscar) || datos==buscar
+                              select u;
+          Response.Write(busca_en);
+
+            
+        }
     }
 }

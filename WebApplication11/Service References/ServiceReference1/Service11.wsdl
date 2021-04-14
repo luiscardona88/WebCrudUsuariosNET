@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="/Imports">
       <xsd:import schemaLocation="http://localhost:2575/Service1.svc?xsd=xsd0" />
       <xsd:import schemaLocation="http://localhost:2575/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2575/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="Service1_DoWork_InputMessage">
@@ -23,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="Service1_listarUsuarios_OutputMessage">
     <wsdl:part name="parameters" element="listarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_buscarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="buscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="Service1_buscarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="buscarUsuarioResponse" />
   </wsdl:message>
   <wsdl:message name="Service1_existeLogin_InputMessage">
     <wsdl:part name="parameters" element="existeLogin" />
@@ -48,6 +55,18 @@
   <wsdl:message name="Service1_borrarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="borrarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="Service1_enviarCorreo_InputMessage">
+    <wsdl:part name="parameters" element="enviarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="Service1_enviarCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="enviarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service1_listarPeliculas_InputMessage">
+    <wsdl:part name="parameters" element="listarPeliculas" />
+  </wsdl:message>
+  <wsdl:message name="Service1_listarPeliculas_OutputMessage">
+    <wsdl:part name="parameters" element="listarPeliculasResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service1">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="urn:Service1/DoWork" message="Service1_DoWork_InputMessage" />
@@ -60,6 +79,10 @@
     <wsdl:operation name="listarUsuarios">
       <wsdl:input wsaw:Action="urn:Service1/listarUsuarios" message="Service1_listarUsuarios_InputMessage" />
       <wsdl:output wsaw:Action="urn:Service1/listarUsuariosResponse" message="Service1_listarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarUsuario">
+      <wsdl:input wsaw:Action="urn:Service1/buscarUsuario" message="Service1_buscarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/buscarUsuarioResponse" message="Service1_buscarUsuario_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="existeLogin">
       <wsdl:input wsaw:Action="urn:Service1/existeLogin" message="Service1_existeLogin_InputMessage" />
@@ -76,6 +99,14 @@
     <wsdl:operation name="borrarUsuario">
       <wsdl:input wsaw:Action="urn:Service1/borrarUsuario" message="Service1_borrarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="urn:Service1/borrarUsuarioResponse" message="Service1_borrarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarCorreo">
+      <wsdl:input wsaw:Action="urn:Service1/enviarCorreo" message="Service1_enviarCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/enviarCorreoResponse" message="Service1_enviarCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarPeliculas">
+      <wsdl:input wsaw:Action="urn:Service1/listarPeliculas" message="Service1_listarPeliculas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Service1/listarPeliculasResponse" message="Service1_listarPeliculas_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

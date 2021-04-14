@@ -33,6 +33,12 @@ namespace WebApplication11.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/listarUsuarios", ReplyAction="urn:Service1/listarUsuariosResponse")]
         System.Threading.Tasks.Task<string> listarUsuariosAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/buscarUsuario", ReplyAction="urn:Service1/buscarUsuarioResponse")]
+        string buscarUsuario(string usuario_param);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/buscarUsuario", ReplyAction="urn:Service1/buscarUsuarioResponse")]
+        System.Threading.Tasks.Task<string> buscarUsuarioAsync(string usuario_param);
+        
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/existeLogin", ReplyAction="urn:Service1/existeLoginResponse")]
         string existeLogin(string usuario, string pass);
         
@@ -56,6 +62,18 @@ namespace WebApplication11.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/borrarUsuario", ReplyAction="urn:Service1/borrarUsuarioResponse")]
         System.Threading.Tasks.Task<string> borrarUsuarioAsync(int estatus, int id_usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/enviarCorreo", ReplyAction="urn:Service1/enviarCorreoResponse")]
+        int enviarCorreo(string[] datosEmail);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/enviarCorreo", ReplyAction="urn:Service1/enviarCorreoResponse")]
+        System.Threading.Tasks.Task<int> enviarCorreoAsync(string[] datosEmail);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/listarPeliculas", ReplyAction="urn:Service1/listarPeliculasResponse")]
+        string listarPeliculas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:Service1/listarPeliculas", ReplyAction="urn:Service1/listarPeliculasResponse")]
+        System.Threading.Tasks.Task<string> listarPeliculasAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -109,6 +127,14 @@ namespace WebApplication11.ServiceReference1 {
             return base.Channel.listarUsuariosAsync();
         }
         
+        public string buscarUsuario(string usuario_param) {
+            return base.Channel.buscarUsuario(usuario_param);
+        }
+        
+        public System.Threading.Tasks.Task<string> buscarUsuarioAsync(string usuario_param) {
+            return base.Channel.buscarUsuarioAsync(usuario_param);
+        }
+        
         public string existeLogin(string usuario, string pass) {
             return base.Channel.existeLogin(usuario, pass);
         }
@@ -139,6 +165,22 @@ namespace WebApplication11.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> borrarUsuarioAsync(int estatus, int id_usuario) {
             return base.Channel.borrarUsuarioAsync(estatus, id_usuario);
+        }
+        
+        public int enviarCorreo(string[] datosEmail) {
+            return base.Channel.enviarCorreo(datosEmail);
+        }
+        
+        public System.Threading.Tasks.Task<int> enviarCorreoAsync(string[] datosEmail) {
+            return base.Channel.enviarCorreoAsync(datosEmail);
+        }
+        
+        public string listarPeliculas() {
+            return base.Channel.listarPeliculas();
+        }
+        
+        public System.Threading.Tasks.Task<string> listarPeliculasAsync() {
+            return base.Channel.listarPeliculasAsync();
         }
     }
 }
