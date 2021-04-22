@@ -48,7 +48,6 @@ namespace WebApplication11
 
         }
 
-
          [OperationContract]
         [WebGet]
           public String buscarUsuario(String usuario_param)
@@ -80,7 +79,6 @@ namespace WebApplication11
 
         }
 
-
         [OperationContract]
         [WebInvoke]
         public string borrarUsuario(int estatus, int id_usuario)
@@ -100,10 +98,6 @@ namespace WebApplication11
 
         }
 
-
-      
-
-
         [OperationContract]
         [WebInvoke]
 
@@ -114,7 +108,13 @@ namespace WebApplication11
 
         }
 
-
+        [OperationContract]
+        [WebInvoke]
+        public String lista_total_pagar(System.Collections.Generic.List<String[]> lista)
+        {
+            return f.lista_total_pagar(lista);
+        }
+          
         [OperationContract]
         [WebGet]
 

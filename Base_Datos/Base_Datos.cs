@@ -40,7 +40,7 @@ namespace Base_Datos
             }
 
 
-            public Object[] getLista(List<SqlParameter> lista_parametros=null)
+            public Object[] getLista(List<SqlParameter> lista_parametros=null,String tipo=null)
             {
                 try
                 {
@@ -52,6 +52,7 @@ namespace Base_Datos
                         foreach (SqlParameter p in lista_parametros)
                         {
                             comando.Parameters.Add(p);
+                            if (tipo == "store") comando.CommandType = System.Data.CommandType.StoredProcedure;
 
                         }
                     }

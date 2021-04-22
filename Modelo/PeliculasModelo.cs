@@ -12,13 +12,49 @@ namespace Modelos
     {
           Base_Datos.Base_Datos base_datos;
         public List<Pelicula> lista_regresa;
+        public List<Total_Pagar> lista_pagar;
         public PeliculasModelo()
         {
             this.base_datos = new Base_Datos.Base_Datos();
             this.lista_regresa = new List<Pelicula>();
+            this.lista_pagar = new List<Total_Pagar>();
         }
 
+        public List<Total_Pagar> lista_total_pagar(System.Collections.Generic.List<String[]> lista)
+        {
 
+            try
+            {
+                String[] parametros = lista[0] as String[];
+                    List<SqlParameter> lista_parametros = new List<SqlParameter>();
+                    SqlParameter p1 = new SqlParameter("@id_usuario", parametros[0]);            
+                    lista_parametros.Add(p1);                  
+                    base_datos.setQuery("sp_total_by_usuario");
+
+                    SqlDataReader datos_reader = base_datos.getLista(lista_parametros, "store")[0] as SqlDataReader;
+
+                    while (datos_reader.Read())
+                   {
+                       var id_usuario = Convert.ToInt16(datos_reader[0]);
+                       var nombre = datos_reader[1].ToString();
+                        var total = datos_reader[2].ToString();
+                        var tipo = (datos_reader[3].ToString())=="R" ?"RENTA":"COMPRA";
+
+                          lista_pagar.Add(new Total_Pagar { id_usuario = id_usuario, nombre = nombre, total = total, tipo=tipo});
+                   }
+
+                    return lista_pagar;
+                    //return base_datos.getLista(lista_parametros,"store");
+                  
+            }
+
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        
 
         public System.Collections.Generic.List<Object[]> confirmarRenta_Compra(System.Collections.Generic.List<String[]> lista)
         {

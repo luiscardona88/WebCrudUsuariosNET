@@ -82,6 +82,14 @@ namespace Facade
         }
 
 
+          public String lista_total_pagar(System.Collections.Generic.List<String[]> lista)
+          {
+           
+              return Newtonsoft.Json.JsonConvert.SerializeObject(peliculas_modelo.lista_total_pagar(lista));
+
+          }
+
+        
         public System.Collections.Generic.List<Object[]>  confirmarRenta_Compra(System.Collections.Generic.List<String[]> lista)
         {
             return peliculas_modelo.confirmarRenta_Compra(lista);        

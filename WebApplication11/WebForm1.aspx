@@ -39,9 +39,29 @@
           
         </asp:GridView>
         <br />
+        
         <br />
 
     </div>
+
+
+    <div class="row" id="row_total" runat="server">
+        <p style="background-color:#507CD1;color:white"><strong>TOTAL A PAGAR:</strong></p>
+        <asp:GridView ID="GridView4" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+            <AlternatingRowStyle BackColor="White" />
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>
+    </div>
+
 
     <div class="row" id="row_edicion" runat="server">
         <br />

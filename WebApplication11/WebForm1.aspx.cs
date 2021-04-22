@@ -300,6 +300,30 @@ namespace WebApplication11
 
         }
 
+        public void listar_total_pagar()
+        {
+
+            this.row_lista.Visible = false;
+            this.row_edicion.Visible = false;
+            this.row_alta.Visible = false;
+            this.div_contacto.Visible = false;
+            this.div_movie.Visible = false;
+            this.row_total.Visible = true;
+
+            List<String[]> parametros = new List<String[]>();
+            var id_usuario = (Session["id_usuario"] != null) ? Session["id_usuario"].ToString() : "0";
+            //var id_usuario = "10";
+            parametros.Add(new String[]{ id_usuario as String});
+            String datos = s.lista_total_pagar(parametros);
+            DataTable tabla = JsonConvert.DeserializeObject<DataTable>(datos);
+           // tabla.TableName = "lista_usuarios";
+            // GridView vista = new GridView();
+            this.GridView4.AutoGenerateColumns = true;
+
+            this.GridView4.DataSource = tabla;
+            this.GridView4.DataMember = "lista_usuarios";
+            this.GridView4.DataBind();
+        }
         protected void FileUpload1_Load(object sender, EventArgs e)
         {
            
@@ -309,6 +333,7 @@ namespace WebApplication11
         {
             System.Collections.Generic.List<String[]> lista = new List<string[]>();
            string id_prop = (Session["id_usuario"] != null) ? Session["id_usuario"].ToString() : "0";
+
             foreach (GridViewRow row in this.GridView2.Rows)
          {
              if((row.Cells[0].FindControl("check") as CheckBox).Checked==true)
@@ -321,7 +346,9 @@ namespace WebApplication11
              }
          }
             s.confirmarRenta_Compra(lista);
-            Response.Redirect("WebForm1.aspx");
+            listar_total_pagar();
+
+           // Response.Redirect("WebForm1.aspx");
 
         }
 
@@ -338,7 +365,6 @@ namespace WebApplication11
                     tabla.TableName = "lista_usuarios";                      
                    // GridView vista = new GridView();
                     this.GridView3.AutoGenerateColumns = true;
-
                     this.GridView3.DataSource = tabla;
                     this.GridView3.DataMember = "lista_usuarios";
                     this.GridView3.DataBind();
